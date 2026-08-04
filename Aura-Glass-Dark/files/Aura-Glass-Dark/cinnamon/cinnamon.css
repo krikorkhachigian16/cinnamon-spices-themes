@@ -30,26 +30,24 @@ stage {
   background-color: rgba(255,255,255,0.5); }
 
 .grouped-window-list-item-box {
+  border-radius: 5px;
   border: 1px solid transparent; }
 
 .grouped-window-list-item-box:hover {
-  border-radius: 5px;
   background-color: rgba(255,255,255,0.2); }
 
 .grouped-window-list-item-box:active, .grouped-window-list-item-box:checked {
-  border: 1px solid rgba(255,255,255,0.3);
-  border-radius: 5px;
-  background-color: rgba(255,255,255,0.3); }
+  background-color: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.3); }
 
 .grouped-window-list-item-box:focus {
-  background-color: rgba(255,255,255,0.5); }
+  background-color: rgba(255,255,255,0.4); }
 
 .grouped-window-list-item-box:active:hover, .grouped-window-list-item-box:checked:hover {
-  border: 1px solid rgba(255,255,255,0.3);
-  background-color: rgba(255,255,255,0.5); }
+  background-color: rgba(255,255,255,0.2); }
 
 .grouped-window-list-item-box:hover:focus {
-  background-color: rgba(255,255,255,0.6); }
+  background-color: rgba(255,255,255,0.5); }
 
 .grouped-window-list-thumbnail-menu {
   margin: 4px;
@@ -127,6 +125,10 @@ stage {
   padding: 10px;
   background-image: url("assets/calendar-arrow-right.svg"); }
 
+.calendar-change-month-back:hover, .calendar-change-month-forward:hover {
+  border-radius: 5px;
+  background-color: rgba(255,255,255,0.3); }
+
 .appmenu-background {
   border-radius: 5px;
   background-color: rgba(60,60,60,0.6); }
@@ -155,8 +157,8 @@ stage {
   background-color: rgba(255,255,255,0.2); }
 
 #appmenu-search-entry:hover, #menu-search-entry:hover {
-  border: 1px solid rgba(255,255,255,0.45);
-  background-color: rgba(255,255,255,0.25); }
+  border: 1px solid rgba(255,255,255,0.2);
+  background-color: rgba(255,255,255,0.3); }
 
 StScrollBar StButton {
   border-radius: 3px;
@@ -164,10 +166,6 @@ StScrollBar StButton {
 
 StScrollBar StButton:hover {
   background-color: rgba(255,255,255,0.75); }
-
-StScrollBar StBin#trough {
-  border-radius: 3px;
-  background-color: rgba(140,140,140,0.25); }
 
 .appmenu-sidebar {
   padding: 10px 0 10px 0;
@@ -192,7 +190,7 @@ StScrollBar StBin#trough {
   background-color: rgb(90,90,90); }
 
 .appmenu-system-button-lock:hover, .appmenu-system-button-logout:hover {
-  background-color: rgb(140,140,140); }
+  background-color: rgb(135,135,135); }
 
 .appmenu-system-button-shutdown {
   padding: 8px;
@@ -201,7 +199,7 @@ StScrollBar StBin#trough {
   background-color: rgb(215,30,30); }
 
 .appmenu-system-button-shutdown:hover {
-  background-color: rgb(255,55,55); }
+  background-color: rgb(235,65,65); }
 
 .menu-favorites-box {
   padding: 5px;
@@ -209,12 +207,18 @@ StScrollBar StBin#trough {
   background-color: rgba(255,255,255,0.15); }
 
 .menu-favorites-button {
+  spacing: 7px; /* Stark Menu favorites spacing */
   padding: 10px; }
 
 .menu-favorites-button:hover {
   padding: 10px;
   border-radius: 5px;
   background-color: rgba(255,255,255,0.3); }
+
+/* Cinnamenu category hover */
+.menu-category-button:hover {
+  border-radius: 5px;
+  background-color: rgba(255,255,255,0.15); }
 
 .popup-separator-menu-item {
   border: 1px solid rgba(140,140,140,0.1); }
@@ -256,7 +260,7 @@ StScrollBar StBin#trough {
   background-color: rgb(215,30,30); }
 
 .dialog-button:destructive-action:focus {
-  background-color: rgb(255,55,55); }
+  background-color: rgb(235,65,65); }
 
 .dialog-button:destructive-action:hover, .dialog-button:destructive-action:active {
   background-color: rgb(255,100,100); }
@@ -280,3 +284,55 @@ StScrollBar StBin#trough {
 
 .user-icon {
   border-radius: 7px; }
+
+.window-border {
+  border-radius: 7px; 
+  border: 5px solid rgb(175,175,175); }
+
+.expo-background {
+  background-color: rgba(200,200,200,0.2); }
+
+.expo-workspaces-name-entry {
+  padding: 6px 12px;
+  border-radius: 7px;
+  background-color: rgba(60,60,60,0.8); 
+  box-shadow: 0 2px 4px 2px rgba(0,0,0,0.5);
+  height: 1.5em; }
+
+.expo-workspaces-name-entry#selected {
+  padding: 6px 12px;
+  border-radius: 7px;
+  background-color: rgba(120,120,120,0.8); 
+  box-shadow: 0 2px 4px 2px rgba(100,100,100,0.5); }
+
+.workspace-thumbnails {
+  spacing: 26px; }
+
+.workspace-add-button {
+  background-image: url("assets/add-workspace.svg");
+  height: 200px;
+  width: 35px;
+  transition-duration: 150; }
+
+.workspace-close-button {
+  background-image: url("assets/close.svg");
+  height: 26px;
+  width: 26px;
+  -cinnamon-close-overlap: 13px; }
+
+.window-close-area {
+  background-image: url("assets/trash-icon.svg");
+  height: 120px;
+  width: 400px; }
+
+.calendar-events-main-box:first-child {
+  min-width: 360px;
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  background-color: rgba(150,150,150,0.15); }
+
+.calendar-events-no-events-button:last-child:first-child:hover {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgba(255,255,255,0.25); }
