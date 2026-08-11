@@ -34,20 +34,24 @@ stage {
   border: 1px solid transparent; }
 
 .grouped-window-list-item-box:hover {
-  background-color: rgba(255,255,255,0.2); }
+  background-color: rgba(255,255,255,0.2);
+  border: 1px solid transparent; }
 
 .grouped-window-list-item-box:active, .grouped-window-list-item-box:checked {
-  background-color: rgba(255,255,255,0.1);
-  border: 1px solid rgba(255,255,255,0.3); }
+  background-color: transparent;
+  border: 1px solid rgba(255,255,255,0.4); }
 
 .grouped-window-list-item-box:focus {
-  background-color: rgba(255,255,255,0.4); }
+  background-color: rgba(255,255,255,0.3);
+  border: 1px solid transparent; }
 
 .grouped-window-list-item-box:active:hover, .grouped-window-list-item-box:checked:hover {
-  background-color: rgba(255,255,255,0.2); }
+  background-color: rgba(255,255,255,0.3);
+  border: 1px solid transparent; }
 
 .grouped-window-list-item-box:hover:focus {
-  background-color: rgba(255,255,255,0.5); }
+  background-color: rgba(255,255,255,0.5);
+  border: 1px solid transparent; }
 
 .grouped-window-list-thumbnail-menu {
   margin: 4px;
@@ -71,6 +75,10 @@ stage {
 
 .grouped-window-list-item-attention:hover {
   background-color: #75eb89; }
+
+.grouped-window-list-badge {
+  border-radius: 2px;
+  background-color: rgb(40,40,40); }
 
 .window-close {
   background-image: url('assets/close.svg'); }
@@ -99,8 +107,8 @@ stage {
   background-color: rgba(255,255,255,0.25); }
 
 .popup-sub-menu {
-  border-radius: 5px;
-  border: 1px solid rgba(255,255,255,0.1); }
+  border-radius: 7px;
+  border: 2px solid rgba(200,200,200,0.1); }
 
 .calendar-day-base {
   padding: 7px 7px; }
@@ -153,19 +161,22 @@ stage {
 #appmenu-search-entry, #appmenu-search-entry:focus, #menu-search-entry, #menu-search-entry:focus, .run-dialog-entry, .prompt-dialog-password-entry {
   padding: 7px 7px;
   border-radius: 5px;
-  border: 1px solid rgba(255,255,255,0.1);
-  background-color: rgba(255,255,255,0.2); }
+  border: 1px solid rgba(255,255,255,0.3);
+  background-color: rgba(255,255,255,0.1); }
 
 #appmenu-search-entry:hover, #menu-search-entry:hover {
-  border: 1px solid rgba(255,255,255,0.2);
-  background-color: rgba(255,255,255,0.3); }
+  border: 1px solid rgba(255,255,255,0.6);
+  background-color: rgba(255,255,255,0.2); }
 
 StScrollBar StButton {
   border-radius: 3px;
-  background-color: rgba(255,255,255,0.45); }
+  background-color: rgba(255,255,255,0.3); }
 
 StScrollBar StButton:hover {
-  background-color: rgba(255,255,255,0.75); }
+  background-color: rgba(255,255,255,0.6); }
+
+StScrollBar StBin#trough {
+  background-color: transparent; }
 
 .appmenu-sidebar {
   padding: 10px 0 10px 0;
@@ -221,7 +232,7 @@ StScrollBar StButton:hover {
   background-color: rgba(255,255,255,0.15); }
 
 .popup-separator-menu-item {
-  border: 1px solid rgba(140,140,140,0.1); }
+  border: 1px solid rgba(150,150,150,0.1); }
 
 .switcher-list {
   padding: 7px 7px; 
@@ -256,7 +267,12 @@ StScrollBar StButton:hover {
 .dialog-button:hover, .dialog-button:active {
   background-color: rgba(170,170,170,0.7); }
 
-.dialog-button:destructive-action {
+.dialog-button:last-child:insensitive {
+  color: grey;
+  background-color: rgba(75,75,75,0.7); }
+
+.dialog-button:destructive-action, .dialog-button:last-child:destructive-action {
+  color: white;
   background-color: rgb(215,30,30); }
 
 .dialog-button:destructive-action:focus {
@@ -336,3 +352,12 @@ StScrollBar StButton:hover {
   padding: 10px;
   border-radius: 5px;
   background-color: rgba(255,255,255,0.25); }
+
+.popup-slider-menu-item, .slider {
+  -slider-height: 0.3em;
+  -slider-background-color: transparent;
+  -slider-active-background-color: rgb(200,200,200);
+  -slider-handle-radius: 0.5em;
+  border: none;
+  height: 1em;
+  min-width: 15em; }
