@@ -1,4 +1,6 @@
-Flat theme with rounded corners and transparency that resembles modern user interface (UI). Best paired with a light background for transparency effects. 
+Flat theme with rounded corners and transparency that resembles a modern user interface (UI). Best paired with a light background for transparency effects.
+
+**License:** GNU General Public License, version 3 (GPL-3.0).
 
 This theme contains assets and code derived from the core Cinnamon theme, which are licensed under the GNU General Public License, version 2 or later (GPL-2.0-or-later).
 
